@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>OpenToWork Generator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2rem; }
+    #canvas {
+      margin-top: 1rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      cursor: grab;
+    }
+    #canvas.dragging {
+      cursor: grabbing;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      display: none;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Upload Your Profile Picture</h1>
+  <input type="file" id="file-input" accept="image/*">
+
+  <!-- Hidden overlay template -->
+  <img id="overlay-template" src="open_to_work.png" style="display:none" alt="Open to Work Overlay">
+
+  <canvas id="canvas"></canvas>
+  <br>
+  <button id="reset-btn">Reset</button>
+  <button id="download-btn">Download</button>
+
+  <!-- External script -->
+  <script src="script.js"></script>
+</body>
+</html>
